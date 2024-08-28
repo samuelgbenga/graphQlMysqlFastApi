@@ -1,11 +1,8 @@
 from fastapi import FastAPI
-from graphql.schemas import graphql_app  # Import your custom GraphQL router
 
+from graphql_server import graphql_app
 
 app = FastAPI()
 
-app.include_router(graphql_app, prefix="/graphql")
 
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="127.0.0.1", port=8000)
+app.include_router(graphql_app, prefix='/graphql')

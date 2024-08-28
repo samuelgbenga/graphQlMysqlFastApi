@@ -1,1 +1,0 @@
-from routes.user_routes import graphql_app
